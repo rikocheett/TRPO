@@ -14,11 +14,17 @@ $c = (float)readline("c = ");
 
 ZaytsevLog::log("The equation: " . $a . "X^2 + " . $b . "X + " . $c . " = 0" . PHP_EOL);
 
-$SolutionOfAQuadraticEquation = new SolutionOfAQuadraticEquation();
-$res = $SolutionOfAQuadraticEquation->solve((float)$a, (float)$b, (float)$c);
-foreach ($res as $el)
+try
 {
-    ZaytsevLog::log($el);
+    $SolutionOfAQuadraticEquation = new SolutionOfAQuadraticEquation();
+    $res = $SolutionOfAQuadraticEquation->solve((float)$a, (float)$b, (float)$c);
+    foreach ($res as $el)
+    {
+        ZaytsevLog::log($el);
+    }
 }
-
+catch (ZaytsevException $e)
+{
+    ZaytsevLog::log($e->getMessage() . PHP_EOL);
+}
 ZaytsevLog::write();
