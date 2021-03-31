@@ -9,10 +9,10 @@ include 'ZaytsevException.php';
 class SolutionOfAQuadraticEquation extends SolutionEquation implements EquationInterface
 {
 
-    public function solve(float $a, float $b, float $c)
+    public function solve(float $a, float $b, float $c):array
     {
         if ($a == 0) {
-           return parent::foo($b, $c);
+            return parent::foo($b, $c);
         }
         $this->computation($a, $b, $c);
         return $this->X1;

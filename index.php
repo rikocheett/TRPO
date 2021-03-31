@@ -6,7 +6,9 @@ use zaytsev\ZaytsevException;
 include 'zaytsev\ZaytsevLog.php';
 include 'zaytsev\SolutionOfAQuadraticEquation.php';
 
+$vers = file_get_contents('version');
 
+ZaytsevLog::log('Program version: ' . trim($vers));
 echo "Enter 3 parameters: " .PHP_EOL;
 $a = (float)readline("a = ");
 $b = (float)readline("b = ");
