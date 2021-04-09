@@ -4,24 +4,35 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c33d57184106d5e611771e2c423045a3",
+    "content-hash": "1ca19ea6531f7d0906797912ab6041c9",
     "packages": [
         {
             "name": "01sas/lib",
-            "version": "1.2",
+            "version": "2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rikocheett/trpo_lib.git",
-                "reference": "fc43e10acf623234f416b6b6294a3a7d4f7fa98f"
+                "reference": "40a612ada3bbb37dce4023440317df157112af66"
             },
             "require": {
                 "rok9ru/trpo-core": "^2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
                     "zaytsev\\": "src"
-                }
+                },
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "scripts": {
+                "test": [
+                    "./vendor/bin/phpunit test"
+                ]
             },
             "license": [
                 "MIT"
@@ -32,7 +43,7 @@
                     "email": "01.sasha.01@mail.ru"
                 }
             ],
-            "time": "2021-04-08T17:31:46+00:00"
+            "time": "2021-04-09T20:52:26+00:00"
         },
         {
             "name": "rok9ru/trpo-core",
