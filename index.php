@@ -1,10 +1,10 @@
 <?php
 
+require __DIR__ . "/vendor/autoload.php";
+
 use zaytsev\solutionOfAQuadraticEquation;
-use zaytsev\ZaytsevLog;
 use zaytsev\ZaytsevException;
-include 'zaytsev\ZaytsevLog.php';
-include 'zaytsev\SolutionOfAQuadraticEquation.php';
+use zaytsev\ZaytsevLog;
 
 $vers = file_get_contents('version');
 

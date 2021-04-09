@@ -1,0 +1,29 @@
+{
+    "name": "01sas/trpo",
+    "authors": [
+        {
+            "name": "rikocheett",
+            "email": "01.sasha.01@mail.ru"
+        }
+    ],
+
+    "type": "library",
+    "license": "MIT",
+    "description": "",
+    "scripts": {
+        "post-install-cmd": "git symbolic-ref --short -q HEAD > version"
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/rikocheett/trpo_lib.git"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/rok9ru/trpo-core.git"
+        }
+    ],
+    "require": {
+        "01sas/lib": "^1.2"
+    }
+}
